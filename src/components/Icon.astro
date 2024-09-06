@@ -15,6 +15,14 @@ import SolidIcon from "@/icons/techs/SolidIcon.astro";
 import SvelteIcon from "@/icons/techs/SvelteIcon.astro";
 import VercelIcon from "@/icons/techs/VercelIcon.astro";
 import VueIcon from "@/icons/techs/VueIcon.astro";
+import CubeIcon from "@/icons/commons/CubeIcon.astro";
+import PalletteIcon from "@/icons/commons/PalletteIcon.astro";
+import WrenchIcon from "@/icons/commons/WrenchIcon.astro";
+import MailIcon from "@/icons/commons/MailIcon.astro";
+import PhoneIcon from "@/icons/commons/PhoneIcon.astro";
+import LocationMarkerIcon from "@/icons/commons/LocationMarkerIcon.astro";
+import LinkedinIcon from "@/icons/commons/LinkedinIcon.astro";
+import LinkIcon from "@/icons/commons/LinkIcon.astro";
 
 interface Props {
   icon: Icon;
@@ -39,6 +47,14 @@ const icons = [
   NetlifyIcon,
   SolidIcon,
   VercelIcon,
+  CubeIcon,
+  PalletteIcon,
+  WrenchIcon,
+  PhoneIcon,
+  MailIcon,
+  LocationMarkerIcon,
+  LinkedinIcon,
+  LinkIcon
 ];
 
 let figures: Record<string, (_props: Record<string, unknown>) => unknown> = {};

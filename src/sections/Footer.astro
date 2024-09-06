@@ -23,17 +23,6 @@ const { data } = Astro.props;
       {data.description}
     </p>
   </section>
-  <section
-    class="flex flex-row flex-wrap justify-center gap-x-3 px-4 md:px-0 md:text-xl"
-  >
-    {
-      data.links.map((link) => (
-        <Action as="a" type="text" href={link.href}>
-          {link.label}
-        </Action>
-      ))
-    }
-  </section>
   <section class="mb-5 flex flex-row flex-wrap justify-center gap-x-3">
     {
       data.socials.map((social) => (

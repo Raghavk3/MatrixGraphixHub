@@ -1,0 +1,95 @@
+---
+const { data } = Astro.props;
+---
+
+<section id="testimonials-section" class="relative">
+  <h2 class="testimonials-title mb-6">{data.title}</h2>
+  <div class="carousel-wrapper relative overflow-hidden">
+    <div class="carousel-container flex">
+      {data.testimonials.map((testimonial) => (
+        <div class="testimonial-item flex-shrink-0 w-full flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-lg">
+          <p class="text-gray-700 text-lg mb-4 text-center">{testimonial.quote}</p>
+          <div class="flex flex-col items-center">
+            <img src={testimonial.image} alt={testimonial.name} class="w-16 h-16 rounded-full mb-2" />
+            <h3 class="text-xl font-semibold text-center">{testimonial.name}</h3>
+            <p class="text-sm text-gray-500 text-center">{testimonial.position}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="controls absolute inset-0 flex justify-between items-center">
+      <button id="prev" class="bg-gray-300 p-2 rounded-full text-gray-800">
+        &#10094;
+      </button>
+      <button id="next" class="bg-gray-300 p-2 rounded-full text-gray-800">
+        &#10095;
+      </button>
+    </div>
+  </div>
+  
+  <style>
+    .testimonials-title {
+      font-size: 2rem; /* Adjust size as needed */
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .carousel-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .carousel-container {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      align-items: center;
+      height: 100%;
+    }
+    .testimonial-item {
+      min-width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .testimonial-item {
+        min-width: 90%;
+      }
+    }
+    .controls {
+      z-index: 10;
+    }
+  </style>
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+      const carouselContainer = document.querySelector('.carousel-container');
+      const totalItems = carouselContainer.children.length;
+      let currentIndex = 0;
+
+      function goToNext() {
+        currentIndex = (currentIndex + 1) % totalItems;
+        carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+
+      function goToPrev() {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+
+      const interval = setInterval(goToNext, 2500);
+
+      document.getElementById('next').addEventListener('click', () => {
+        clearInterval(interval);
+        goToNext();
+      });
+
+      document.getElementById('prev').addEventListener('click', () => {
+        clearInterval(interval);
+        goToPrev();
+      });
+    });
+  </script>
+</section>

@@ -9,46 +9,92 @@ interface Props {
 const { data } = Astro.props;
 ---
 
-<header
-  id="navbar"
-  class="w-full transition duration-300 justify-center fixed h-20 z-50 hidden md:flex"
->
-  <nav aria-label="Main Navigation" class="flex flex-row items-center w-3/4">
+<header id="navbar" class="w-full transition duration-300 justify-between fixed h-19 z-50 flex bg-[#0d1531]">
+  <nav aria-label="Main Navigation" class="flex flex-row items-center w-full justify-between px-4 md:px-12">
     <div class="text-nowrap">
-      <Action as="a" class="text-xl" href="#">{data.logo}</Action>
+      <!-- Logo Section -->
+      <Action as="a" class="text-xl font-mokoto text-white" href="#">{data.logo}</Action>
     </div>
-    <ul class="flex flex-row w-full justify-center gap-x-14">
-      {
-        data.links.map((item) => (
-          <li class="text-lg hover:scale-110 hover:opacity-80">
-            <Action as="a" href={item.href}>
-              {item.label}
-            </Action>
-          </li>
-        ))
-      }
+    <div class="md:hidden">
+      <!-- Hamburger Icon for Mobile -->
+      <button id="hamburger" class="focus:outline-none">
+        <svg
+          class="w-6 h-6 text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+            id="hamburger-icon"
+          />
+        </svg>
+      </button>
+    </div>
+    <!-- Navbar Links -->
+    <ul id="nav-links" class="flex-col md:flex-row w-full justify-end gap-x-14 hidden md:flex">
+      {data.links.map((item) => (
+        <li class="text-lg text-white hover:scale-110 hover:opacity-80">
+          <Action as="a" href={item.href}>
+            {item.label}
+          </Action>
+        </li>
+      ))}
     </ul>
-    <span></span>
   </nav>
+  <!-- Mobile Dropdown -->
+  <div id="mobile-dropdown" class="absolute top-18 left-0 w-full bg-[#0e1a40] text-white hidden flex-col">
+    {data.links.map((item) => (
+      <Action as="a" class="block px-4 py-2 hover:bg-blue-600" href={item.href}>
+        {item.label}
+      </Action>
+    ))}
+  </div>
 </header>
 
-<script>
-  window.addEventListener("scroll", function () {
-    const navbar = document.getElementById("navbar");
-    if (!navbar) return;
+<style>
+  @font-face {
+    font-family: 'Mokoto';
+    src: url('/fonts/Mokoto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 
-    if (window.scrollY >= 20) {
-      navbar.classList.remove("border-b-transparent");
-      navbar.classList.remove("bg-transparent");
-      navbar.classList.add("border-b");
-      navbar.classList.add("border-b-slate-300");
-      navbar.classList.add("bg-white");
+  .font-mokoto {
+    font-family: 'Mokoto', sans-serif;
+  }
+
+  #mobile-dropdown {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click', function () {
+    const mobileDropdown = document.getElementById('mobile-dropdown');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+
+    if (mobileDropdown.classList.contains('hidden')) {
+      mobileDropdown.classList.remove('hidden');
+      mobileDropdown.classList.add('flex');
+      hamburgerIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
     } else {
-      navbar.classList.remove("border-b");
-      navbar.classList.remove("border-b-slate-300");
-      navbar.classList.remove("bg-white");
-      navbar.classList.add("border-b-transparent");
-      navbar.classList.add("bg-transparent");
+      mobileDropdown.classList.remove('flex');
+      mobileDropdown.classList.add('hidden');
+      hamburgerIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
     }
   });
 </script>

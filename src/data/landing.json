@@ -24,160 +24,140 @@
     }
   },
   "headerData": {
-    "logo": "Luna Landing",
+    "logo": "Matrix Graphix Hub",
     "links": [
-      { "label": "About", "href": "#" },
-      { "label": "Services", "href": "#" },
-      { "label": "Prices", "href": "#" },
-      { "label": "FAQs", "href": "#" },
-      { "label": "Blog", "href": "#" }
+		{ "label": "Services", "href": "#services" },
+		{ "label": "Works", "href": "#adventajes" },
+		{ "label": "Testimonials", "href": "#testimonials" },
+		{ "label": "Contact Us", "href": "#contactUs" }
     ]
   },
   "heroData": {
-    "title": "Open Your Mind to the Universe: Welcome to",
     "subTitle": "Discover the Beauty of the Cosmos: Explore the Infinite Wonders of Space with Us",
-    "primaryCta": "Github Repo",
+    "primaryCta": "About us",
     "secondaryCta": "See our pricing",
     "highlightedTitle": "Luna Landing"
   },
   "servicesData": {
-    "title": "Everything you need to build a website",
+    "title": "Services we Offer",
     "services": [
       {
-        "title": "Professional Templates",
+        "title": "Graphic Designing",
+        "icon": "PalletteIcon",
+        "description": "Our designs are meticulously crafted by seasoned graphic designers to ensure every visual element stands out. From color schemes to typography, every aspect is designed to create a lasting impression that aligns with your brand's identity",
+		"link":"https://docs.google.com/forms/d/e/1FAIpQLSfcMAcsMVGM40_sRGOnNC4AttD5V0WAKcJJ-0oOs6w3FBFDgg/viewform"
+	},
+	{
+        "title": "UIUX Designing",
+        "icon": "WrenchIcon",
+        "description": "Our user interface and user experience designs are built by experts who prioritize both form and function. With a focus on intuitive navigation, modern aesthetics, and seamless interactions, we ensure your users have a delightful experience.",
+		"link":"https://forms.gle/j1xVdm8XKT3X5NGF9"
+	},
+      {
+        "title": "3D modeling",
+        "icon": "CubeIcon",
+        "description": "Our 3D models are created by skilled artists who bring depth and realism to every project. From intricate details to lifelike textures, our models are designed to enhance your project and create immersive experiences."
+	},
+      {
+        "title": "Website Designing",
         "icon": "DevIcon",
-        "description": "Our templates are crafted by experienced web designers, ensuring a modern and polished look for your site. From typography to element design, every detail is carefully considered to convey a professional image."
-      },
-      {
-        "title": "Integrated Accessibility",
-        "icon": "PlanetIcon",
-        "description": "We care about web accessibility and have integrated features to ensure your site is accessible to all users, including those with visual or motor disabilities. Our templates comply with WCAG accessibility standards to provide an inclusive experience for everyone."
-      },
-      {
-        "title": "SEO-Optimized",
-        "icon": "FileIcon",
-        "description": "We understand the importance of your site being visible in search engines. That's why our templates are optimized for SEO, meaning they are structured and coded to be easily indexed by Google and other search engines, helping to improve your ranking in search results."
-      },
-      {
-        "title": "Easy Set up",
-        "icon": "ConfigIcon",
-        "description": "With our templates, you don't need to be a web development expert to have an impressive site. They are easy to set up and customize, with intuitive options that allow you to change colors, fonts, page layout, and more with just a few clicks. Make your site stand out hassle-free!"
-      }
+        "description": "Our websites are designed by professional web designers who understand the balance between aesthetics and functionality. From responsive layouts to engaging visuals, every element is tailored to provide an exceptional online presence",
+		"link":"https://docs.google.com/forms/d/e/1FAIpQLScOV5ZN45mZZahNy8rZiCs9ynEp5FDdJnxp3x1KOBi19s5Zcg/viewform"
+	}
     ]
   },
   "adventajesData": {
     "title": "    Unlock the Power of Luna Landing: Discover the Key Benefits",
     "adventajes": [
       {
-        "title": "Take Your Website to Perfection",
-        "description": "Our intuitive customization options empower you to create a website that stands out and resonates with your audience like never before. Say goodbye to cookie-cutter designs and hello to a website that truly reflects your vision and personality.",
+        "title": "Unleash Your Visual Imagination",
+        "description": "Transform your ideas into stunning visuals that captivate and communicate with precision. Our graphic design services bring your brand to life, making every detail a masterpiece that resonates with your audience.",
         "img": "template.webp",
         "imageAlt": "this is an image about the template service adventajes",
-        "checks": ["Colors", "Fonts", "Layout"]
+        "checks": ["Visual Identity", "Custom Illustrations", "Print & Digital Ready"]
+      },
+	  {
+        "title": "Craft Experiences, Not Just Interfaces",
+        "description": "Elevate your digital presence with designs that aren’t just visually appealing but also intuitively functional. Our UI/UX design process is all about creating seamless, engaging experiences that keep your users coming back.",
+        "img": "UIUX.png",
+        "imageAlt": "this is an image about the template service adventajes",
+        "checks": ["User-Centered Design", "Interactive Prototypes", "Aesthetic Consistency"]
+      },
+	  {
+        "title": "Bring Your Ideas into a New Dimension",
+        "description": "Step into the future with 3D models that make your concepts tangible and compelling. Whether it’s product design or architectural visualization, our 3D modeling services turn imagination into reality with precision and flair.",
+        "img": "3D Modeling.png",
+        "imageAlt": "this is an image about the SEO adventajes",
+        "checks": ["Realistic Rendering", "Precision Detailing", "Versatile Outputs"]
       },
       {
-        "title": "Reach the Top of Search Rankings",
-        "description": "Elevate your online visibility with our SEO-optimized template. Built with search engine algorithms in mind, our template is designed to help your website climb to the top of search engine results pages (SERPs). From optimized meta tags and clean HTML structure to mobile responsiveness and fast loading times, every aspect of our template is geared towards maximizing your website's search engine performance. Increase your organic traffic, attract more visitors, and grow your online presence with ease.",
+        "title": "Design Your Digital Dreamscape",
+        "description": "Create a website that’s not just a place online, but an immersive experience. Our website design services ensure your site is as unique as your brand, blending aesthetics with functionality to engage and inspire your visitors.",
         "img": "seo.webp",
         "imageAlt": "this is an image about the SEO adventajes",
-        "checks": ["Search Visibility", "Organic Traffic", "Online Credibility"]
+        "checks": ["Custom Layouts", "Responsive Design", "SEO Optimization"]
       }
     ]
   },
-  "brandsData": {
-    "title": "Integration with Leading Technologies",
-    "description": "Effortlessly integrate with leading technologies. Our platform seamlessly supports industry-standard tools and frameworks, enabling you to stay ahead of the curve and maximize productivity. Explore endless possibilities with our comprehensive compatibility features",
-    "brands": [
-      { "label": "React", "icon": "ReactIcon", "href": "https://react.dev/" },
-      { "label": "Vue", "icon": "VueIcon", "href": "https://vuejs.org/" },
+  "testimonialsData": {
+    "title": "What Our Clients Say",
+    "testimonials": [
       {
-        "label": "Svelte",
-        "icon": "SvelteIcon",
-        "href": "https://svelte.dev/"
+        "quote": "This platform has transformed the way we work. The features are intuitive and easy to use.",
+        "name": "Vinit Kumar Gunjan",
+        "position": "CEO, Company X",
+        "image": "/path/to/image1.png"
       },
       {
-        "label": "Solid",
-        "icon": "SolidIcon",
-        "href": "https://www.solidjs.com/"
+        "quote": "A game changer in the industry! Highly recommended for anyone looking to improve their workflow.",
+        "name": "Jane Smith",
+        "position": "CTO, Company Y",
+        "image": "/path/to/image2.png"
       },
       {
-        "label": "Vercel",
-        "icon": "VercelIcon",
-        "href": "https://vercel.com/"
+        "quote": "Exceptional service and support. The platform exceeded our expectations in every way.",
+        "name": "Mahendra Lakshmi",
+        "position": "Director General, CMRIT MUN '23",
+        "image": "/eB1skVG.png"
       },
       {
-        "label": "Netlify",
-        "icon": "NetlifyIcon",
-        "href": "https://www.netlify.com/"
+        "quote": "An invaluable tool for our team. It has streamlined our processes significantly.",
+        "name": "Raghava Kesanapalli",
+        "position": "Student Marketeer, Red Bull",
+        "image": "/path/to/image4.png"
+      },
+      {
+        "quote": "The best solution we've found for our needs. It's user-friendly and powerful.",
+        "name": "Carol White",
+        "position": "Operations Director, Company B",
+        "image": "/path/to/image5.png"
       }
     ]
   },
-  "pricingData": {
-    "title": "Our Pricing",
-    "tiers": [
-      {
-        "title": "Starter",
-        "description": "Best option for personal use & for your next project.",
-        "price": {
-          "amount": "Free"
-        },
-        "features": [
-          "feature 1",
-          "feature 2",
-          "feature 3",
-          "feature 4",
-          "feature 5"
+  "contactUsData": {
+    "title": "Contact Us",
+    "description": "We'd love to hear from you! Whether you have a question, need assistance, or want to discuss a project, our team is here to help.",
+    "contactDetails": {
+        "email": "matrixgraphixhub@gmail.com",
+        "phone": "+91 9391700139",
+        "address": "Hyderabad, India"
+    },
+    "form": {
+        "fields": [
+            { "label": "Name", "type": "text", "placeholder": "Your Name" },
+            { "label": "Email", "type": "email", "placeholder": "Your Email" },
+            { "label": "Message", "type": "textarea", "placeholder": "Your Message" }
         ],
-        "cta": "Get started"
-      },
-      {
-        "title": "Professional",
-        "description": "Relevant for multiple users, extended & premium support.",
-        "price": {
-          "amount": "$29",
-          "period": "/month"
-        },
-        "features": [
-          "feature 1",
-          "feature 2",
-          "feature 3",
-          "feature 4",
-          "feature 5"
-        ],
-        "cta": "Get started"
-      },
-      {
-        "title": "Enterprise",
-        "description": "Best for large scale uses and extended redistribution rights.",
-        "price": {
-          "amount": "$59",
-          "period": "/month"
-        },
-        "features": [
-          "feature 1",
-          "feature 2",
-          "feature 3",
-          "feature 4",
-          "feature 5"
-        ],
-        "cta": "Get started"
-      }
-    ]
-  },
+        "submit": "Send Message"
+    }
+},
   "footerData": {
-    "logo": "Luna Landing",
+    "logo": "Matrix Graphix Hub",
     "description": "Discover the Beauty of the Cosmos: Explore the Infinite Wonders of Space with Us",
-    "links": [
-      { "label": "About", "href": "/" },
-      { "label": "Services", "href": "/" },
-      { "label": "Blog", "href": "/" },
-      { "label": "FAQs", "href": "/" },
-      { "label": "Contact", "href": "/" }
-    ],
     "socials": [
-      { "icon": "FacebookIcon", "href": "/" },
-      { "icon": "InstagramIcon", "href": "/" },
-      { "icon": "TwitterIcon", "href": "/" },
+      { "icon": "LinkIcon", "href": "/" },
+      { "icon": "InstagramIcon", "href": "/https://www.instagram.com/matrixgraphixhub/" },
+      { "icon": "LinkedinIcon", "href": "/" },
       { "icon": "GithubIcon", "href": "/" }
     ]
   }

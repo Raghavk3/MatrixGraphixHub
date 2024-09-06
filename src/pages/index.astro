@@ -1,12 +1,12 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Adventajes from "@/sections/Adventajes.astro";
-import Brands from "@/sections/Brands.astro";
-import Footer from "@/sections/Footer.astro";
 import Header from "@/sections/Header.astro";
 import Hero from "@/sections/Hero.astro";
-import Pricing from "@/sections/Pricing.astro";
 import Services from "@/sections/Services.astro";
+import Adventajes from "@/sections/Adventajes.astro";
+import Testimonials from "@/sections/Testimonials.astro";
+import ContactUs from "@/sections/ContactUs.astro";
+import Footer from "@/sections/Footer.astro";
 import { getLandingData } from "@/services/data.service";
 
 const data = await getLandingData();
@@ -15,13 +15,27 @@ const data = await getLandingData();
 <Layout meta={data.meta}>
   <Header data={data.headerData} />
   <main class="flex flex-col justify-center items-center">
-    <div class="w-3/4">
+    <!-- Hero Section Full Width -->
+    <section id="hero" class="w-full">
       <Hero data={data.heroData} />
-      <Services data={data.servicesData} />
-      <Adventajes data={data.adventajesData} />
-      <Brands data={data.brandsData} />
-      <Pricing data={data.pricingData} />
+    </section>
+    
+    <!-- Other Sections Constrained to 3/4 Width -->
+    <div class="w-3/4">
+      <section id="services">
+        <Services data={data.servicesData} />
+      </section>
+      <section id="adventajes">
+        <Adventajes data={data.adventajesData} />
+      </section>
+      <section id="testimonials">
+        <Testimonials data={data.testimonialsData} />
+      </section>
+      <section id="contactUs">
+        <ContactUs data={data.contactUsData} />
+      </section>
     </div>
+    
     <Footer data={data.footerData} />
   </main>
 </Layout>

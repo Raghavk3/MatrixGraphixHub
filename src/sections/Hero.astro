@@ -14,39 +14,49 @@ interface Props {
 const { data } = Astro.props;
 ---
 
-<section id="hero-section" class="flex justify-center mt-48 h-screen">
-  <div class="md:w-1/2">
-    <h1 class="text-4xl text-center font-semibold md:text-6xl">
-      {data.title}
-      <span class="text-primary"> {data.highlightedTitle} </span>
-    </h1>
-    <h2 class="mt-10 text-lg text-center opacity-80 md:text-2xl">
+<section id="hero-section" class="relative flex flex-col items-center justify-center h-screen w-full">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img 
+      src="/1.png" 
+      alt="Background Image" 
+      class="w-full h-full object-cover opacity-20" 
+    />
+  </div>
+  
+  <!-- Content -->
+  <div class="relative z-10 md:w-1/2 text-center">
+    <img
+      src="/8206 x 4081 MGH LOGO.png"
+      alt="Hero Image"
+      class="w-1/2 h-auto mx-auto mb-6"  
+	<h2 class="text-lg opacity-80 md:text-2xl mb-8">
       {data.subTitle}
     </h2>
-    <div class="flex justify-evenly mt-10">
+    <div class="flex flex-col md:flex-row justify-center gap-4 mb-8 mt-5">
       <Action
         as="a"
         type="button"
-        class="bg-black text-white"
-        href="https://github.com/JimmyCamus/luna-landing"
+        class="bg-black text-white py-2 px-4 rounded"
+        href="#"
         target="_blank"
       >
         {data.primaryCta}
       </Action>
       <Action
         as="a"
-        class="bg-transparent text-black border border-black"
+        class="bg-transparent text-black border border-black py-2 px-4 rounded"
         type="button"
-        href="https://github.com/JimmyCamus/luna-landing"
+        href="#"
         target="_blank"
       >
         {data.secondaryCta}
       </Action>
     </div>
-    <div class="flex justify-center">
+    <!-- <div class="flex justify-center mt-24">
       <Action
         as="a"
-        class="flex justify-center items-center animate-bounce border-2 border-transparent bg-primary text-white rounded-full w-14 h-14 mt-32 hover:bg-white hover:text-primary hover:border-primary transition"
+        class="flex justify-center items-center animate-bounce border-2 border-transparent bg-primary text-white rounded-full w-14 h-14 hover:bg-white hover:text-primary hover:border-primary transition"
         href="#services-section"
         title="arrow down icon"
       >
@@ -64,7 +74,7 @@ const { data } = Astro.props;
             d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"></path>
         </svg>
       </Action>
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -81,5 +91,29 @@ const { data } = Astro.props;
   #hero-section {
     opacity: 0;
     animation: fadeIn 0.8s ease-in-out forwards;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .absolute {
+    position: absolute;
+  }
+
+  .inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .z-10 {
+    z-index: 10;
+  }
+
+  /* Adjust the shadow here if needed */
+  .shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reduce shadow size */
   }
 </style>

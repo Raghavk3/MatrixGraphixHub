@@ -1,4 +1,5 @@
 export interface LandingPageData {
+[x: string]: TestimonialsData;
   meta: Meta;
   headerData: HeaderData;
   heroData: HeroData;
@@ -63,17 +64,18 @@ export interface Social {
   href: string;
 }
 
-export interface BrandsData {
-  title: string;
-  description: string;
-  brands: Brand[];
-}
-
-export interface Brand {
-  label: string;
-  icon: string;
-  href: string;
-}
+export interface TestimonialsData {
+	title: string;
+	testimonials: Testimonial[];
+  }
+  
+  export interface Testimonial {
+	quote: string;
+	name: string;
+	position: string;
+	image: string;
+  }
+  
 
 export interface PricingData {
   title: string;
