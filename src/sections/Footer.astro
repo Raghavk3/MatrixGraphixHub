@@ -15,7 +15,8 @@ const { data } = Astro.props;
 >
   <section>
     <Action as="a" type="text" class="text-xl md:text-2xl" href="/">
-      {data.logo}
+      {/* Displaying alt text for logo */}
+      {data.logo.alt}
     </Action>
   </section>
   <section>

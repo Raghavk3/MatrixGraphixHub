@@ -9,11 +9,14 @@ interface Props {
 const { data } = Astro.props;
 ---
 
-<header id="navbar" class="w-full transition duration-300 justify-between fixed h-19 z-50 flex bg-[#0d1531]">
+<header id="navbar" class="w-full transition duration-300 justify-between fixed h-20 z-50 flex bg-[#0d1531]">
   <nav aria-label="Main Navigation" class="flex flex-row items-center w-full justify-between px-4 md:px-12">
     <div class="text-nowrap">
       <!-- Logo Section -->
-      <Action as="a" class="text-xl font-mokoto text-white" href="#">{data.logo}</Action>
+      <Action as="a" class="text-xl font-mokoto text-white" href="#">
+        {/* Displaying alt text for logo */}
+        {data.logo.alt}
+      </Action>
     </div>
     <div class="md:hidden">
       <!-- Hamburger Icon for Mobile -->
@@ -48,6 +51,23 @@ const { data } = Astro.props;
   </nav>
   <!-- Mobile Dropdown -->
   <div id="mobile-dropdown" class="absolute top-18 left-0 w-full bg-[#0e1a40] text-white hidden flex-col">
+    <!-- Close Button -->
+    <button id="close-dropdown" class="self-end p-4">
+      <svg
+        class="w-6 h-6 text-white"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    </button>
     {data.links.map((item) => (
       <Action as="a" class="block px-4 py-2 hover:bg-blue-600" href={item.href}>
         {item.label}
@@ -80,6 +100,14 @@ const { data } = Astro.props;
       opacity: 1;
     }
   }
+
+  /* Add custom styles for close button */
+  #close-dropdown {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
 </style>
 
 <script>
@@ -97,6 +125,17 @@ const { data } = Astro.props;
         mobileDropdown.classList.add('hidden');
         hamburgerIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
       }
+    }
+  });
+
+  document.getElementById('close-dropdown')?.addEventListener('click', function () {
+    const mobileDropdown = document.getElementById('mobile-dropdown');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+
+    if (mobileDropdown && hamburgerIcon) {
+      mobileDropdown.classList.remove('flex');
+      mobileDropdown.classList.add('hidden');
+      hamburgerIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
     }
   });
 </script>

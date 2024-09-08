@@ -90,12 +90,11 @@ const data = Astro.props.data;
   document.addEventListener('DOMContentLoaded', () => {
     const servicesSection = document.getElementById('services-section');
     if (servicesSection) { // Check if servicesSection is not null
-      servicesSection.classList.add('animate');
-      
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             servicesSection.classList.add('animate');
+            observer.unobserve(servicesSection); // Stop observing once animated
           }
         });
       }, { threshold: 0.2 });
