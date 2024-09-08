@@ -1,5 +1,8 @@
 ---
-const { data } = Astro.props;
+import type { TestimonialsData } from "@/config/landing.interface";
+
+const props = Astro.props as { data: TestimonialsData };
+const { data } = props;
 ---
 
 <section id="testimonials-section" class="relative">
@@ -63,30 +66,34 @@ const { data } = Astro.props;
     }
   </style>
 
-  <script type="text/javascript">
+  <script type="text/javascript" is:inline>
     document.addEventListener('DOMContentLoaded', () => {
       const carouselContainer = document.querySelector('.carousel-container');
-      const totalItems = carouselContainer.children.length;
+      const totalItems = carouselContainer?.children.length || 0;
       let currentIndex = 0;
 
       function goToNext() {
         currentIndex = (currentIndex + 1) % totalItems;
-        carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        if (carouselContainer) {
+          carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
       }
 
       function goToPrev() {
         currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-        carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        if (carouselContainer) {
+          carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
       }
 
       const interval = setInterval(goToNext, 2500);
 
-      document.getElementById('next').addEventListener('click', () => {
+      document.getElementById('next')?.addEventListener('click', () => {
         clearInterval(interval);
         goToNext();
       });
 
-      document.getElementById('prev').addEventListener('click', () => {
+      document.getElementById('prev')?.addEventListener('click', () => {
         clearInterval(interval);
         goToPrev();
       });

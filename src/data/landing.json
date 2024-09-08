@@ -1,164 +1,171 @@
 {
-  "meta": {
-    "title": "Luna Landing your perfect landing page",
-    "description": "Landing page template",
-    "lang": "en",
-    "charset": "UTF-8",
-    "ldJson": {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      "name": "Luna Landing",
-      "description": "Fictitious company that seeks to elevate and simplify the lives of web developers.",
-      "url": "https://luna-landing-rust.vercel.app/",
-      "logo": "./public/favicon.svg",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "luna-landing@luna.com",
-        "contactType": "Client Service"
-      },
-      "sameAs": [
-        "https://www.twitter.com/yourpage",
-        "https://www.instagram.com/yourpage",
-        "https://www.linkedin.com/company/yourpage"
-      ]
-    }
-  },
-  "headerData": {
-    "logo": "Matrix Graphix Hub",
-    "links": [
-		{ "label": "Services", "href": "#services" },
-		{ "label": "Works", "href": "#adventajes" },
-		{ "label": "Testimonials", "href": "#testimonials" },
-		{ "label": "Contact Us", "href": "#contactUs" }
-    ]
-  },
-  "heroData": {
-    "subTitle": "Discover the Beauty of the Cosmos: Explore the Infinite Wonders of Space with Us",
-    "primaryCta": "About us",
-    "secondaryCta": "See our pricing",
-    "highlightedTitle": "Luna Landing"
-  },
-  "servicesData": {
-    "title": "Services we Offer",
-    "services": [
-      {
-        "title": "Graphic Designing",
-        "icon": "PalletteIcon",
-        "description": "Our designs are meticulously crafted by seasoned graphic designers to ensure every visual element stands out. From color schemes to typography, every aspect is designed to create a lasting impression that aligns with your brand's identity",
-		"link":"https://docs.google.com/forms/d/e/1FAIpQLSfcMAcsMVGM40_sRGOnNC4AttD5V0WAKcJJ-0oOs6w3FBFDgg/viewform"
-	},
-	{
-        "title": "UIUX Designing",
-        "icon": "WrenchIcon",
-        "description": "Our user interface and user experience designs are built by experts who prioritize both form and function. With a focus on intuitive navigation, modern aesthetics, and seamless interactions, we ensure your users have a delightful experience.",
-		"link":"https://forms.gle/j1xVdm8XKT3X5NGF9"
-	},
-      {
-        "title": "3D modeling",
-        "icon": "CubeIcon",
-        "description": "Our 3D models are created by skilled artists who bring depth and realism to every project. From intricate details to lifelike textures, our models are designed to enhance your project and create immersive experiences."
-	},
-      {
-        "title": "Website Designing",
-        "icon": "DevIcon",
-        "description": "Our websites are designed by professional web designers who understand the balance between aesthetics and functionality. From responsive layouts to engaging visuals, every element is tailored to provide an exceptional online presence",
-		"link":"https://docs.google.com/forms/d/e/1FAIpQLScOV5ZN45mZZahNy8rZiCs9ynEp5FDdJnxp3x1KOBi19s5Zcg/viewform"
-	}
-    ]
-  },
-  "adventajesData": {
-    "title": "    Unlock the Power of Luna Landing: Discover the Key Benefits",
-    "adventajes": [
-      {
-        "title": "Unleash Your Visual Imagination",
-        "description": "Transform your ideas into stunning visuals that captivate and communicate with precision. Our graphic design services bring your brand to life, making every detail a masterpiece that resonates with your audience.",
-        "img": "template.webp",
-        "imageAlt": "this is an image about the template service adventajes",
-        "checks": ["Visual Identity", "Custom Illustrations", "Print & Digital Ready"]
-      },
-	  {
-        "title": "Craft Experiences, Not Just Interfaces",
-        "description": "Elevate your digital presence with designs that aren’t just visually appealing but also intuitively functional. Our UI/UX design process is all about creating seamless, engaging experiences that keep your users coming back.",
-        "img": "UIUX.png",
-        "imageAlt": "this is an image about the template service adventajes",
-        "checks": ["User-Centered Design", "Interactive Prototypes", "Aesthetic Consistency"]
-      },
-	  {
-        "title": "Bring Your Ideas into a New Dimension",
-        "description": "Step into the future with 3D models that make your concepts tangible and compelling. Whether it’s product design or architectural visualization, our 3D modeling services turn imagination into reality with precision and flair.",
-        "img": "3D Modeling.png",
-        "imageAlt": "this is an image about the SEO adventajes",
-        "checks": ["Realistic Rendering", "Precision Detailing", "Versatile Outputs"]
-      },
-      {
-        "title": "Design Your Digital Dreamscape",
-        "description": "Create a website that’s not just a place online, but an immersive experience. Our website design services ensure your site is as unique as your brand, blending aesthetics with functionality to engage and inspire your visitors.",
-        "img": "seo.webp",
-        "imageAlt": "this is an image about the SEO adventajes",
-        "checks": ["Custom Layouts", "Responsive Design", "SEO Optimization"]
-      }
-    ]
-  },
-  "testimonialsData": {
-    "title": "What Our Clients Say",
-    "testimonials": [
-      {
-        "quote": "This platform has transformed the way we work. The features are intuitive and easy to use.",
-        "name": "Vinit Kumar Gunjan",
-        "position": "CEO, Company X",
-        "image": "/path/to/image1.png"
-      },
-      {
-        "quote": "A game changer in the industry! Highly recommended for anyone looking to improve their workflow.",
-        "name": "Jane Smith",
-        "position": "CTO, Company Y",
-        "image": "/path/to/image2.png"
-      },
-      {
-        "quote": "Exceptional service and support. The platform exceeded our expectations in every way.",
-        "name": "Mahendra Lakshmi",
-        "position": "Director General, CMRIT MUN '23",
-        "image": "/eB1skVG.png"
-      },
-      {
-        "quote": "An invaluable tool for our team. It has streamlined our processes significantly.",
-        "name": "Raghava Kesanapalli",
-        "position": "Student Marketeer, Red Bull",
-        "image": "/path/to/image4.png"
-      },
-      {
-        "quote": "The best solution we've found for our needs. It's user-friendly and powerful.",
-        "name": "Carol White",
-        "position": "Operations Director, Company B",
-        "image": "/path/to/image5.png"
-      }
-    ]
-  },
-  "contactUsData": {
-    "title": "Contact Us",
-    "description": "We'd love to hear from you! Whether you have a question, need assistance, or want to discuss a project, our team is here to help.",
-    "contactDetails": {
-        "email": "matrixgraphixhub@gmail.com",
-        "phone": "+91 9391700139",
-        "address": "Hyderabad, India"
+    "meta": {
+        "title": "Luna Landing your perfect landing page",
+        "description": "Landing page template",
+        "lang": "en",
+        "charset": "UTF-8",
+        "ldJson": {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Luna Landing",
+            "description": "Fictitious company that seeks to elevate and simplify the lives of web developers.",
+            "url": "https://luna-landing-rust.vercel.app/",
+            "logo": "./public/favicon.svg",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "luna-landing@luna.com",
+                "contactType": "Client Service"
+            },
+            "sameAs": [
+                "https://www.twitter.com/yourpage",
+                "https://www.instagram.com/yourpage",
+                "https://www.linkedin.com/company/yourpage"
+            ]
+        }
     },
-    "form": {
-        "fields": [
-            { "label": "Name", "type": "text", "placeholder": "Your Name" },
-            { "label": "Email", "type": "email", "placeholder": "Your Email" },
-            { "label": "Message", "type": "textarea", "placeholder": "Your Message" }
-        ],
-        "submit": "Send Message"
+    "headerData": {
+        "logo": {
+            "url": "./public/favicon.svg",
+            "alt": "Matrix Graphix Hub"
+        },
+        "links": [
+            { "label": "Services", "href": "#services" },
+            { "label": "Works", "href": "#adventajes" },
+            { "label": "Testimonials", "href": "#testimonials" },
+            { "label": "Contact Us", "href": "#contactUs" }
+        ]
+    },
+    "heroData": {
+        "title": "Welcome to Luna Landing",
+        "subTitle": "Discover the Beauty of the Cosmos: Explore the Infinite Wonders of Space with Us",
+        "primaryCta": "About us",
+        "secondaryCta": "See our pricing",
+        "highlightedTitle": "Luna Landing"
+    },
+    "servicesData": {
+        "title": "Services we Offer",
+        "services": [
+            {
+                "title": "Graphic Designing",
+                "icon": "PalletteIcon",
+                "description": "Our designs are meticulously crafted by seasoned graphic designers to ensure every visual element stands out. From color schemes to typography, every aspect is designed to create a lasting impression that aligns with your brand's identity",
+                "link": "https://docs.google.com/forms/d/e/1FAIpQLSfcMAcsMVGM40_sRGOnNC4AttD5V0WAKcJJ-0oOs6w3FBFDgg/viewform"
+            },
+            {
+                "title": "UIUX Designing",
+                "icon": "WrenchIcon",
+                "description": "Our user interface and user experience designs are built by experts who prioritize both form and function. With a focus on intuitive navigation, modern aesthetics, and seamless interactions, we ensure your users have a delightful experience.",
+                "link": "https://forms.gle/j1xVdm8XKT3X5NGF9"
+            },
+            {
+                "title": "3D modeling",
+                "icon": "CubeIcon",
+                "description": "Our 3D models are created by skilled artists who bring depth and realism to every project. From intricate details to lifelike textures, our models are designed to enhance your project and create immersive experiences."
+            },
+            {
+                "title": "Website Designing",
+                "icon": "DevIcon",
+                "description": "Our websites are designed by professional web designers who understand the balance between aesthetics and functionality. From responsive layouts to engaging visuals, every element is tailored to provide an exceptional online presence",
+                "link": "https://docs.google.com/forms/d/e/1FAIpQLScOV5ZN45mZZahNy8rZiCs9ynEp5FDdJnxp3x1KOBi19s5Zcg/viewform"
+            }
+        ]
+    },
+    "adventajesData": {
+        "title": "Unlock the Power of Luna Landing: Discover the Key Benefits",
+        "adventajes": [
+            {
+                "title": "Unleash Your Visual Imagination",
+                "description": "Transform your ideas into stunning visuals that captivate and communicate with precision. Our graphic design services bring your brand to life, making every detail a masterpiece that resonates with your audience.",
+                "img": "template.webp",
+                "imageAlt": "this is an image about the template service adventajes",
+                "checks": ["Visual Identity", "Custom Illustrations", "Print & Digital Ready"]
+            },
+            {
+                "title": "Craft Experiences, Not Just Interfaces",
+                "description": "Elevate your digital presence with designs that aren’t just visually appealing but also intuitively functional. Our UI/UX design process is all about creating seamless, engaging experiences that keep your users coming back.",
+                "img": "UIUX.png",
+                "imageAlt": "this is an image about the template service adventajes",
+                "checks": ["User-Centered Design", "Interactive Prototypes", "Aesthetic Consistency"]
+            },
+            {
+                "title": "Bring Your Ideas into a New Dimension",
+                "description": "Step into the future with 3D models that make your concepts tangible and compelling. Whether it’s product design or architectural visualization, our 3D modeling services turn imagination into reality with precision and flair.",
+                "img": "3D Modeling.png",
+                "imageAlt": "this is an image about the SEO adventajes",
+                "checks": ["Realistic Rendering", "Precision Detailing", "Versatile Outputs"]
+            },
+            {
+                "title": "Design Your Digital Dreamscape",
+                "description": "Create a website that’s not just a place online, but an immersive experience. Our website design services ensure your site is as unique as your brand, blending aesthetics with functionality to engage and inspire your visitors.",
+                "img": "seo.webp",
+                "imageAlt": "this is an image about the SEO adventajes",
+                "checks": ["Custom Layouts", "Responsive Design", "SEO Optimization"]
+            }
+        ]
+    },
+    "testimonialsData": {
+        "title": "What Our Clients Say",
+        "testimonials": [
+            {
+                "quote": "This platform has transformed the way we work. The features are intuitive and easy to use.",
+                "name": "Vinit Kumar Gunjan",
+                "position": "CEO, Company X",
+                "image": "/path/to/image1.png"
+            },
+            {
+                "quote": "A game changer in the industry! Highly recommended for anyone looking to improve their workflow.",
+                "name": "Jane Smith",
+                "position": "CTO, Company Y",
+                "image": "/path/to/image2.png"
+            },
+            {
+                "quote": "Exceptional service and support. The platform exceeded our expectations in every way.",
+                "name": "Mahendra Lakshmi",
+                "position": "Director General, CMRIT MUN '23",
+                "image": "/eB1skVG.png"
+            },
+            {
+                "quote": "An invaluable tool for our team. It has streamlined our processes significantly.",
+                "name": "Raghava Kesanapalli",
+                "position": "Student Marketeer, Red Bull",
+                "image": "/path/to/image4.png"
+            },
+            {
+                "quote": "The best solution we've found for our needs. It's user-friendly and powerful.",
+                "name": "Carol White",
+                "position": "Operations Director, Company B",
+                "image": "/path/to/image5.png"
+            }
+        ]
+    },
+    "contactUsData": {
+        "title": "Contact Us",
+        "description": "We'd love to hear from you! Whether you have a question, need assistance, or want to discuss a project, our team is here to help.",
+        "contactDetails": {
+            "email": "matrixgraphixhub@gmail.com",
+            "phone": "+91 9391700139",
+            "address": "Hyderabad, India"
+        },
+        "form": {
+            "fields": [
+                { "label": "Name", "type": "text", "placeholder": "Your Name" },
+                { "label": "Email", "type": "email", "placeholder": "Your Email" },
+                { "label": "Message", "type": "textarea", "placeholder": "Your Message" }
+            ],
+            "submit": "Send Message"
+        }
+    },
+    "footerData": {
+        "logo": {
+            "url": "./public/favicon.svg",
+            "alt": "Matrix Graphix Hub"
+        },
+        "description": "Discover the Beauty of the Cosmos: Explore the Infinite Wonders of Space with Us",
+        "socials": [
+            { "icon": "LinkIcon", "href": "/" },
+            { "icon": "InstagramIcon", "href": "https://www.instagram.com/matrixgraphixhub/" },
+            { "icon": "LinkedinIcon", "href": "/" },
+            { "icon": "GithubIcon", "href": "/" }
+        ]
     }
-},
-  "footerData": {
-    "logo": "Matrix Graphix Hub",
-    "description": "Discover the Beauty of the Cosmos: Explore the Infinite Wonders of Space with Us",
-    "socials": [
-      { "icon": "LinkIcon", "href": "/" },
-      { "icon": "InstagramIcon", "href": "/https://www.instagram.com/matrixgraphixhub/" },
-      { "icon": "LinkedinIcon", "href": "/" },
-      { "icon": "GithubIcon", "href": "/" }
-    ]
-  }
 }

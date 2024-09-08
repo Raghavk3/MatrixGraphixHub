@@ -8,8 +8,28 @@ import Testimonials from "@/sections/Testimonials.astro";
 import ContactUs from "@/sections/ContactUs.astro";
 import Footer from "@/sections/Footer.astro";
 import { getLandingData } from "@/services/data.service";
+import type { ContactUsData } from "@/config/landing.interface";
 
 const data = await getLandingData();
+
+// Dummy ContactUsData
+const defaultContactUsData: ContactUsData = {
+  title: "Contact Us",
+  description: "We'd love to hear from you. Please reach out with any questions or comments.",
+  contactDetails: {
+    email: "example@example.com",
+    phone: "123-456-7890",
+    address: "123 Example St, Example City, EX 12345",
+  },
+  form: {
+    fields: [
+      { label: "Name", type: "text", placeholder: "Your Name" },
+      { label: "Email", type: "email", placeholder: "Your Email" },
+      { label: "Message", type: "textarea", placeholder: "Your Message" }
+    ],
+    submit: "Send Message",
+  },
+};
 ---
 
 <Layout meta={data.meta}>
@@ -32,7 +52,7 @@ const data = await getLandingData();
         <Testimonials data={data.testimonialsData} />
       </section>
       <section id="contactUs">
-        <ContactUs data={data.contactUsData} />
+        <ContactUs data={data.contactUsData || defaultContactUsData} />
       </section>
     </div>
     

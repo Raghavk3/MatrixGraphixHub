@@ -38,34 +38,33 @@ const { data } = Astro.props;
 
     <!-- Contact Form -->
     <div class="flex-1">
-		<form id="contact-form" class="flex flex-col gap-y-4">
-			{data.form.fields.map((field) => (
-			  <div class="flex flex-col">
-				<label class="text-lg mb-2">{field.label}</label>
-				{field.type === "textarea" ? (
-				  <textarea
-					name={field.label.toLowerCase()}  
-					class="p-3 border border-gray-300 rounded-lg"
-					placeholder={field.placeholder}
-					required
-				  />
-				) : (
-				  <input
-					type={field.type}
-					name={field.label.toLowerCase()}  
-					class="p-3 border border-gray-300 rounded-lg"
-					placeholder={field.placeholder}
-					required
-				  />
-				)}
-			  </div>
-			))}
-			<Action as="button" class="bg-primary text-white w-full mt-6" type="submit">
-			  {data.form.submit}
-			</Action>
-		  </form>					
+      <form id="contact-form" class="flex flex-col gap-y-4">
+        {data.form.fields.map((field) => (
+          <div class="flex flex-col">
+            <label class="text-lg mb-2">{field.label}</label>
+            {field.type === "textarea" ? (
+              <textarea
+                name={field.label.toLowerCase()}  
+                class="p-3 border border-gray-300 rounded-lg"
+                placeholder={field.placeholder}
+                required
+              />
+            ) : (
+              <input
+                type={field.type}
+                name={field.label.toLowerCase()}  
+                class="p-3 border border-gray-300 rounded-lg"
+                placeholder={field.placeholder}
+                required
+              />
+            )}
+          </div>
+        ))}
+        <Action as="button" class="bg-primary text-white w-full mt-6" type="submit">
+          {data.form.submit}
+        </Action>
+      </form>          
     </div>
   </div>
-  <script src="/contactFormHandler.js" type="module" defer></script>
-
+  <script src="/contactFormHandler.js" type="module" defer is:inline></script>
 </section>

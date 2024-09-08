@@ -83,18 +83,20 @@ const { data } = Astro.props;
 </style>
 
 <script>
-  document.getElementById('hamburger').addEventListener('click', function () {
+  document.getElementById('hamburger')?.addEventListener('click', function () {
     const mobileDropdown = document.getElementById('mobile-dropdown');
     const hamburgerIcon = document.getElementById('hamburger-icon');
 
-    if (mobileDropdown.classList.contains('hidden')) {
-      mobileDropdown.classList.remove('hidden');
-      mobileDropdown.classList.add('flex');
-      hamburgerIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
-    } else {
-      mobileDropdown.classList.remove('flex');
-      mobileDropdown.classList.add('hidden');
-      hamburgerIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+    if (mobileDropdown && hamburgerIcon) {
+      if (mobileDropdown.classList.contains('hidden')) {
+        mobileDropdown.classList.remove('hidden');
+        mobileDropdown.classList.add('flex');
+        hamburgerIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+      } else {
+        mobileDropdown.classList.remove('flex');
+        mobileDropdown.classList.add('hidden');
+        hamburgerIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+      }
     }
   });
 </script>

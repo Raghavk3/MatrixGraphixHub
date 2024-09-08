@@ -31,7 +31,7 @@ const data = Astro.props.data;
             {service.description}
           </p>
           <div>
-            <a href={service.link} class="service-btn">
+            <a href={service.link ?? '#'} class="service-btn">
               Learn More
             </a>
           </div>
@@ -89,14 +89,18 @@ const data = Astro.props.data;
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const servicesSection = document.getElementById('services-section');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          servicesSection.classList.add('animate');
-        }
-      });
-    }, { threshold: 0.2 });
+    if (servicesSection) { // Check if servicesSection is not null
+      servicesSection.classList.add('animate');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            servicesSection.classList.add('animate');
+          }
+        });
+      }, { threshold: 0.2 });
 
-    observer.observe(servicesSection);
+      observer.observe(servicesSection);
+    }
   });
 </script>
